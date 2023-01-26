@@ -1,0 +1,24 @@
+
+# From https://stackoverflow.com/questions/49478/git-ignore-file-for-xcode-projects
+
+.DS_Store
+.Trashes
+*.swp
+
+*~.nib
+
+DerivedData/
+build/
+
+xcuserdata/
+
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+
+!default.pbxuser
+!default.mode1v3
+!default.mode2v3
+!default.perspectivev3
+
