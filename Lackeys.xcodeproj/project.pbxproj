@@ -14,6 +14,10 @@
 		6A44B3DF29820E8100F5D8DD /* LackeysUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A44B3DE29820E8100F5D8DD /* LackeysUITests.swift */; };
 		6ADEDD42298CB34C0041E243 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADEDD41298CB34C0041E243 /* Keys.swift */; };
 		6ADEDD47298CB38F0041E243 /* KeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADEDD46298CB38F0041E243 /* KeyTests.swift */; };
+		6ADEDD4C299138160041E243 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADEDD4B299138160041E243 /* Action.swift */; };
+		6ADEDD512991383F0041E243 /* Oddments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADEDD502991383F0041E243 /* Oddments.swift */; };
+		6ADEDD56299138560041E243 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADEDD55299138560041E243 /* Geometry.swift */; };
+		6ADEDD5B299138820041E243 /* MiscTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADEDD5A299138820041E243 /* MiscTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,10 @@
 		6A44B3E029820E8100F5D8DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6ADEDD41298CB34C0041E243 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		6ADEDD46298CB38F0041E243 /* KeyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyTests.swift; sourceTree = "<group>"; };
+		6ADEDD4B299138160041E243 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		6ADEDD502991383F0041E243 /* Oddments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Oddments.swift; sourceTree = "<group>"; };
+		6ADEDD55299138560041E243 /* Geometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
+		6ADEDD5A299138820041E243 /* MiscTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiscTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +112,9 @@
 				6A44B3C929820E8100F5D8DD /* Info.plist */,
 				6A44B3CA29820E8100F5D8DD /* Lackeys.entitlements */,
 				6ADEDD41298CB34C0041E243 /* Keys.swift */,
+				6ADEDD4B299138160041E243 /* Action.swift */,
+				6ADEDD502991383F0041E243 /* Oddments.swift */,
+				6ADEDD55299138560041E243 /* Geometry.swift */,
 			);
 			path = Lackeys;
 			sourceTree = "<group>";
@@ -114,6 +125,7 @@
 				6A44B3D329820E8100F5D8DD /* LackeysTests.swift */,
 				6A44B3D529820E8100F5D8DD /* Info.plist */,
 				6ADEDD46298CB38F0041E243 /* KeyTests.swift */,
+				6ADEDD5A299138820041E243 /* MiscTests.swift */,
 			);
 			path = LackeysTests;
 			sourceTree = "<group>";
@@ -257,7 +269,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A44B3C329820E7900F5D8DD /* AppDelegate.swift in Sources */,
+				6ADEDD4C299138160041E243 /* Action.swift in Sources */,
 				6ADEDD42298CB34C0041E243 /* Keys.swift in Sources */,
+				6ADEDD512991383F0041E243 /* Oddments.swift in Sources */,
+				6ADEDD56299138560041E243 /* Geometry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A44B3D429820E8100F5D8DD /* LackeysTests.swift in Sources */,
+				6ADEDD5B299138820041E243 /* MiscTests.swift in Sources */,
 				6ADEDD47298CB38F0041E243 /* KeyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

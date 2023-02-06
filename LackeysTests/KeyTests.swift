@@ -73,7 +73,6 @@ class KeyTests: XCTestCase {
     
     private func verifyChord(desc: String, keyName: String, flags: CGEventFlags) {
         let (chord, error) = Chord.parseWithErrorFrom(desc)
-        print(chord, error)
         if error != nil {
             XCTFail("Unexpected chord parse error: " + error!)
         }
