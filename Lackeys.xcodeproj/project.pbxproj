@@ -18,6 +18,8 @@
 		6ADEDD512991383F0041E243 /* Oddments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADEDD502991383F0041E243 /* Oddments.swift */; };
 		6ADEDD56299138560041E243 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADEDD55299138560041E243 /* Geometry.swift */; };
 		6ADEDD5B299138820041E243 /* MiscTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADEDD5A299138820041E243 /* MiscTests.swift */; };
+		6ADEDD6029913A700041E243 /* Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADEDD5F29913A700041E243 /* Accessibility.swift */; };
+		6ADEDD6529913AE00041E243 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADEDD6429913AE00041E243 /* Logging.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		6ADEDD502991383F0041E243 /* Oddments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Oddments.swift; sourceTree = "<group>"; };
 		6ADEDD55299138560041E243 /* Geometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
 		6ADEDD5A299138820041E243 /* MiscTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiscTests.swift; sourceTree = "<group>"; };
+		6ADEDD5F29913A700041E243 /* Accessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accessibility.swift; sourceTree = "<group>"; };
+		6ADEDD6429913AE00041E243 /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				6A44B3C229820E7900F5D8DD /* AppDelegate.swift */,
+				6ADEDD6429913AE00041E243 /* Logging.swift */,
+				6ADEDD5F29913A700041E243 /* Accessibility.swift */,
 				6A44B3C429820E8100F5D8DD /* Assets.xcassets */,
 				6A44B3C629820E8100F5D8DD /* MainMenu.xib */,
 				6A44B3C929820E8100F5D8DD /* Info.plist */,
@@ -271,7 +277,9 @@
 				6A44B3C329820E7900F5D8DD /* AppDelegate.swift in Sources */,
 				6ADEDD4C299138160041E243 /* Action.swift in Sources */,
 				6ADEDD42298CB34C0041E243 /* Keys.swift in Sources */,
+				6ADEDD6529913AE00041E243 /* Logging.swift in Sources */,
 				6ADEDD512991383F0041E243 /* Oddments.swift in Sources */,
+				6ADEDD6029913A700041E243 /* Accessibility.swift in Sources */,
 				6ADEDD56299138560041E243 /* Geometry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
