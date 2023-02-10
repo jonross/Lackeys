@@ -24,6 +24,8 @@
 		6ADEDD6F2995B1F00041E243 /* EngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADEDD6E2995B1F00041E243 /* EngineTests.swift */; };
 		6ADEDD742995B3370041E243 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADEDD732995B3370041E243 /* Config.swift */; };
 		6ADEDD792995B3560041E243 /* ConfigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADEDD782995B3560041E243 /* ConfigTests.swift */; };
+		6ADEDD7E2995DDE00041E243 /* AppControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADEDD7D2995DDE00041E243 /* AppControl.swift */; };
+		6ADEDD832995DDEB0041E243 /* KeyTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADEDD822995DDEB0041E243 /* KeyTap.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		6ADEDD6E2995B1F00041E243 /* EngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineTests.swift; sourceTree = "<group>"; };
 		6ADEDD732995B3370041E243 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		6ADEDD782995B3560041E243 /* ConfigTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigTests.swift; sourceTree = "<group>"; };
+		6ADEDD7D2995DDE00041E243 /* AppControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppControl.swift; sourceTree = "<group>"; };
+		6ADEDD822995DDEB0041E243 /* KeyTap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyTap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +135,8 @@
 				6ADEDD4B299138160041E243 /* Action.swift */,
 				6ADEDD502991383F0041E243 /* Oddments.swift */,
 				6ADEDD55299138560041E243 /* Geometry.swift */,
+				6ADEDD7D2995DDE00041E243 /* AppControl.swift */,
+				6ADEDD822995DDEB0041E243 /* KeyTap.swift */,
 			);
 			path = Lackeys;
 			sourceTree = "<group>";
@@ -293,6 +299,8 @@
 				6ADEDD6529913AE00041E243 /* Logging.swift in Sources */,
 				6ADEDD512991383F0041E243 /* Oddments.swift in Sources */,
 				6ADEDD6A2995B1AB0041E243 /* Engine.swift in Sources */,
+				6ADEDD832995DDEB0041E243 /* KeyTap.swift in Sources */,
+				6ADEDD7E2995DDE00041E243 /* AppControl.swift in Sources */,
 				6ADEDD6029913A700041E243 /* Accessibility.swift in Sources */,
 				6ADEDD56299138560041E243 /* Geometry.swift in Sources */,
 			);
