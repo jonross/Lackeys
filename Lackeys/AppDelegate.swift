@@ -1,9 +1,4 @@
-//
-//  AppDelegate.swift
-//  Lackeys
-//
-//  Created by jon.ross on 1/25/23.
-//
+/// Contains only enough code to initialize the app and handle UI events.
 
 import Cocoa
 
@@ -14,8 +9,22 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var menu: NSMenu!
     private var statusItem : NSStatusItem!
     
+    private var keyTap: KeyTap!
+    private var appControl: AppControl!
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         initStatusBar()
+        Key.setup()
+        let engine = Engine()
+        let c = Config(forEngine: engine)
+        c.readAndApply()
+        // TODO: surface configuration errors
+        for error in c.errors {
+            Log.main.error(error)
+        }
+        appControl = AppControl(engine: engine, statusItem: statusItem)
+        keyTap = KeyTap(engine: engine, controls: appControl)
+        keyTap.enable()
         updateStatusBar()
     }
 
@@ -33,8 +42,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     /// Called whenever there is a state change that requires changing the status bar.
     
     private func updateStatusBar() {
-        statusItem.button?.title = "M?"
-        /*
         switch keyTap.state {
             case .manuallyDisabled:
                 statusItem.button?.title = "L-"
@@ -45,18 +52,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             case .enabled:
                 statusItem.button?.title = "L+"
         }
-        */
     }
+    
+    /// Called from the "Enable" menu item.  Why manually?  After reading about issues with
+    /// background timers, I want the table enabled on the main thread.
     
    @IBAction func enableFromMenu(_ sender: Any) {
-        print("enabled")
+        keyTap.enable()
         updateStatusBar()
     }
     
+    /// Called from the "Disable" menu item; disable the tap and update status.
+    
     @IBAction func disableFromMenu(_ sender: Any) {
-        print("disabled")
+        keyTap.disable()
         updateStatusBar()
     }
+    
+    /// Called from the "Quit" menu item.
     
     @IBAction func quitFromMenu(_ sender: Any) {
         NSApplication.shared.terminate(nil)
