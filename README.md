@@ -8,7 +8,7 @@ inherently insecure (it must run un-sandboxed) and should be used with caution. 
 deliberately limited so that a compromised configuration file cannot invoke arbitrary commands.
 More configuration security features are planned.
 
-This is an alpha version for early adopters.
+This is an alpha version for a few interested colleagues.
 
 Lackeys is released under the [MIT license](./LICENSE).
 
