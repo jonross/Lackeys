@@ -15,6 +15,8 @@ class Log {
     // because the volume of messages is too high.
     static let keys = CustomLog(category: "keys", enabled: debugging)
     
+    static let maps = CustomLog(category: "maps", enabled: true)
+    
     // The log for everything else.
     static let main = CustomLog(category: "main", enabled: true)
 

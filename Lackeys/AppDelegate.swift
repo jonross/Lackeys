@@ -5,7 +5,7 @@ import Cocoa
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    @IBOutlet var window: NSWindow!
+    @IBOutlet var window: NSWindow?
     @IBOutlet weak var menu: NSMenu!
     private var statusItem : NSStatusItem!
     
