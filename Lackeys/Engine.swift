@@ -46,11 +46,11 @@ class Engine {
     
     func setApp(name: String?) {
         if let name = name, let bindings = perAppBindings[name] {
-            Log.keys.info("bindings \(bindings) now active")
+            Log.maps.info("bindings \(bindings) now active")
             appBindings = bindings
             return
         }
-        Log.keys.info("global bindings restored")
+        Log.maps.info("global bindings restored")
         appBindings = nil
     }
     
@@ -72,27 +72,27 @@ class Engine {
     func handle(type: CGEventType, keycode: Int, dupe: Bool, flags: CGEventFlags) throws -> (Action, String) {
         
         if type != .keyUp && type != .keyDown {
-            // Log.keys.info("pass unwanted type \(type.rawValue)")
+            Log.maps.info("pass unwanted type \(type.rawValue)")
             return (PassKey(), "unwanted event")
         }
         
         guard let key = Key.findByCode(code: Int(keycode)) else {
-            // Log.keys.info("pass unknown key \(keycode)")
+            Log.maps.info("pass unknown key \(keycode)")
             return (PassKey(), "unknown key")
         }
         
         if !key.flags.isEmpty {
-            // Log.keys.info("pass modifier key \(key)")
+            Log.maps.info("pass modifier key \(key)")
             return (PassKey(), "modifier key")
         }
 
         if let action = ignoredKeys[key.code] {
             if type == .keyUp {
-                Log.keys.info("\(key) no longer ignored")
+                Log.maps.info("\(key) no longer ignored")
                 ignoredKeys[key.code] = nil
             }
             else {
-                Log.keys.info("\(key) is ignored")
+                Log.maps.info("\(key) is ignored")
             }
             return (action, "ignored")
         }
@@ -104,16 +104,16 @@ class Engine {
         }
         
         if let bindings = appBindings, let action = bindings.receive(gesture) {
-            Log.keys.info("  -> \(action) (\(bindings))")
+            Log.maps.info("  -> \(action) (\(bindings))")
             return (action, "by \(bindings)")
         }
 
         if let bindings = globalBindings, let action = bindings.receive(gesture) {
-            Log.keys.info("  -> \(action) (\(bindings))")
+            Log.maps.info("  -> \(action) (\(bindings))")
             return (action, "by \(bindings)")
         }
 
-        Log.keys.info("  -> pass (fell through)")
+        Log.maps.info("  -> pass (fell through)")
         return (PassKey(), "unbound")
     }
 }

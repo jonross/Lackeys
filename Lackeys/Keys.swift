@@ -17,7 +17,6 @@ class Key: Equatable, Hashable, CustomStringConvertible {
     
     static func == (lhs: Key, rhs: Key) -> Bool {
         let ret = lhs.code == rhs.code
-        // Log.keys.info("check \(lhs.code) == \(rhs.code) -> \(ret)")
         return ret
     }
     
@@ -155,7 +154,6 @@ struct Chord: Equatable, Hashable, CustomStringConvertible {
     
     static func == (lhs: Chord, rhs: Chord) -> Bool {
         let ret = lhs.key == rhs.key && lhs.flags == rhs.flags
-        // Log.keys.info("check \(lhs) == \(rhs) -> \(ret)")
         return ret
     }
 
