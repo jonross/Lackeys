@@ -62,12 +62,15 @@ class AppControl {
 
     func doExternal(command: String) {
         let fm = FileManager.default
+        let filePath = fm.homeDirectoryForCurrentUser.appendingPathComponent(".lackeydo").path
+        /*
         do {
             let appSupportURL = try fm.url(for: .documentDirectory, in: .userDomainMask, 
                                            appropriateFor: nil, create: true)
             let fileURL = appSupportURL.appendingPathComponent("xfeed")
             var filePath = fileURL.path
             filePath = "/tmp/xfeed"
+            */
             if !fm.fileExists(atPath: filePath) {
                 if !fm.createFile(atPath: filePath, contents: "".data(using: .utf8)!, attributes: nil) {
                     Log.main.error("Can't create \(filePath)")
@@ -82,12 +85,14 @@ class AppControl {
                 fileHandle.closeFile()
             }
             else {
-                Log.main.error("Can't write to documentDirectory \(fileURL)")
+                Log.main.error("Can't write to \(filePath)")
             }
+        /*
         }
         catch {
             Log.main.error("Unable to write in documentDirectory: \(error)")
         }
+        */
     }
     
     func prompt() {

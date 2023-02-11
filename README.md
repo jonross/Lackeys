@@ -1,6 +1,6 @@
 # Lackeys
 
-Don't struggle with clumsy keyboard shortcuts or fussy window layouts.  Get Lackeys to do it for
+Don't struggle with unintuitive app shortcuts or tricky window layouts.  Get Lackeys to do it for
 you.
 
 Lackeys is a prototype keyboard accelerator for MacOS.  Like all recent accessibility apps, it is
@@ -9,6 +9,10 @@ deliberately limited so that a compromised configuration file cannot invoke arbi
 More configuration security features are planned.
 
 This is an alpha release for early adopters.
+
+## Disclaimer
+
+This is my first MacOS app.  I have no idea what I'm doing.
 
 # Installing
 
@@ -25,12 +29,14 @@ Moving and resizing windows only works with one display.
 The first time you use the `prompt` action, the cursor is not in the text box.  After typing a
 response this works fine until the next time the app launches.
 
-For reasons TBD, Lackeys periodically loses the ability to move / resize windows, or to process any
-key bindings at all.  To fix, exit and restart the app.  If that doesn't help, exit the app, type
+MacOS periodically disables the key event monitor and/or accessibility API without notice or error,
+making Lackeys unable to move / resize windows, or to process any key bindings at all.  (If you are
+able to reproduce this reliably please let me know!) To fix, exit and restart the app.  If that
+doesn't help, exit the app, type
 
     tccutil reset Accessibility com.github.jonross.Lackeys
 
-and follow the post-installation steps above.  Do not type this while the app is still running or
+and follow the post-installation steps above.  Do not type this while Lackeys is still running or
 you will temporarily disable your keyboard.
 
 # Configuration
