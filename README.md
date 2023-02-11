@@ -8,7 +8,9 @@ inherently insecure (it must run un-sandboxed) and should be used with caution. 
 deliberately limited so that a compromised configuration file cannot invoke arbitrary commands.
 More configuration security features are planned.
 
-This is an alpha release for early adopters.
+This is an alpha version for early adopters.
+
+Lackeys is released under the [MIT license](./LICENSE).
 
 ## Disclaimer
 
