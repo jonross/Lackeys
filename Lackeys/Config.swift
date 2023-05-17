@@ -130,6 +130,9 @@ class Config {
         guard let chord = Chord.parseFrom(chordStr) else {
             return oops("\(chordStr) is not a valid key combination")
         }
+        if leader == nil && chord.flags.isEmpty {
+            return oops("cannot bind a key without modifiers")
+        }
 
         // Validate the action.
         let (action, error) = actionStr.asActionWithError()
