@@ -36,6 +36,8 @@ class ConfigTests: XCTestCase {
                 "line 1: leader L1 is unset")
         check("leader L1 Option Slash\nbind L1 to send X",
                 "line 2: bind command is missing a key chord")
+        check("bind X to send Y",
+              "line 1: cannot bind a key without modifiers")
     }
 
     /// Assert that parsing a given configuration file excerpt generates the expected errors
